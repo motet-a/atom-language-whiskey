@@ -1,0 +1,80 @@
+'name': 'Whiskey'
+'scopeName': 'source.whiskey'
+'fileTypes': [
+  'wsky'
+]
+
+'patterns': [
+  { 'include': '#block_comment' }
+  {
+    'comment': 'Control keyword'
+    'name': 'keyword.control.whiskey'
+    'match': '\\b(and|as|break|case|class|const|else|except|export|false|final|finally|for|if|import|in|interface|not|null|or|return|super|superclass|switch|true|try|var|while)\\b'
+  }
+  {
+    'comment': 'Single-line comment'
+    'name': 'comment.line.double-slash.whiskey'
+    'begin': '//'
+    'end': '$'
+  }
+  {
+   'comment': 'Block comment'
+   'name': 'comment.block.whiskey'
+   'begin': '/\\*'
+   'end': '\\*/'
+  }
+  {
+    'comment': 'Function call'
+    'match': '\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\('
+    'captures': {
+      '1': { 'name': 'entity.name.function.whiskey' }
+    }
+  }
+  {
+    'comment': 'Double-quote String'
+    'name': 'string.quoted.double.whiskey'
+    'begin': 'b?"'
+    'end': '"'
+  }
+  {
+    'comment': 'Single-quote String'
+    'name': 'string.quoted.single.whiskey'
+    'begin': 'b?\''
+    'end': '\''
+  }
+  {
+    'comment': 'Class pre-included functions'
+    'name': 'support.type.std.whiskey'
+    'match': '\\b(toString)\\b'
+  }
+  {
+    'comment': 'Functions from pre-defined whiskey modules'
+    'name': 'support.type.std.whiskey'
+    'match': '\\bmath.[0-9a-zA-Z]*\\b'
+  }
+  {
+    'comment': 'Floating point literal (fraction)'
+    'name': 'constant.numeric.float.whiskey'
+    'match': '\\b[0-9][0-9_]*\\.[0-9][0-9_]*([eE][+-]?[0-9_]+)?(f32|f64)?\\b'
+  }
+  {
+    'comment': 'Integer literal (decimal)'
+    'name': 'constant.numeric.integer.decimal.rust'
+    'match': '\\b[0-9][0-9_]*\\b'
+  }
+  {
+    'comment': 'Integer literal (hexadecimal)'
+    'name': 'constant.numeric.integer.hexadecimal.rust'
+    'match': '\\b0x[a-fA-F0-9_]+([ui](8|16|32|64|s|size))?\\b'
+  }
+  {
+    'comment': 'Integer literal (octal)'
+    'name': 'constant.numeric.integer.octal.rust'
+    'match': '\\b0o[0-7_]+([ui](8|16|32|64|s|size))?\\b'
+  }
+  {
+    'comment': 'Integer literal (binary)'
+    'name': 'constant.numeric.integer.binary.rust'
+    'match': '\\b0b[01_]+([ui](8|16|32|64|s|size))?\\b'
+  }
+]

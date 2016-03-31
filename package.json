@@ -1,0 +1,23 @@
+{
+  "name": "language-whiskey",
+  "main": "./lib/language-whiskey",
+  "version": "0.0.1",
+  "description": "Provides Whiskey language support in Atom",
+  "keywords": [
+  "whiskey",
+  "wsky",
+  "language",
+  "langage",
+  "color",
+  "syntax",
+  "highlight"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arignir/atom-language-whiskey.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
